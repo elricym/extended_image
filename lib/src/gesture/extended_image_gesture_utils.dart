@@ -401,11 +401,11 @@ bool defaultSlideEndHandler(
     {Offset offset, Size pageSize, SlideAxis pageGestureAxis}) {
   if (pageGestureAxis == SlideAxis.both) {
     return offset.distance >
-        Offset(pageSize.width, pageSize.height).distance / 3.5;
+        Offset(pageSize.width, pageSize.height).distance / 7.0;
   } else if (pageGestureAxis == SlideAxis.horizontal) {
-    return offset.dx.abs() > pageSize.width / 3.5;
+    return offset.dx.abs() > pageSize.width / 7.0;
   } else if (pageGestureAxis == SlideAxis.vertical) {
-    return offset.dy.abs() > pageSize.height / 3.5;
+    return offset.dy.abs() > pageSize.height / 7.0;
   }
   return true;
 }
